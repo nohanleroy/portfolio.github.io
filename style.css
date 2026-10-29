@@ -1,0 +1,356 @@
+/* Couleurs de thème */
+:root {
+    --bg: #e6efe6;
+    --text: #243326;
+    --header-bg: #3f5f4a;
+    --link-bg: #5b7d66;
+    --link-text: white;
+    --link-hover-bg: white;
+    --link-hover-text: #3f5f4a;
+    --card-bg: #fafdf9;
+    --accent: #8fbf9f;
+    --aside-bg: #e3efe3;
+    --aside-text: #3d6b4d;
+    --footer-bg: #3f5f4a;
+    --footer-text: #dcebdc;
+    #contacts{
+                border-left: 5px solid #517a60;
+            }
+        
+        form {
+                max-width: 600px; /*largeur max*/
+                margin: 2rem auto;
+                padding-right: 5px;
+            }
+        
+        input, textarea, select{
+                margin-bottom: 1rem;
+                border: 2px solid #517a60;
+
+            }
+        
+        label{
+                display: block;
+                margin-bottom: 0.4rem;
+            }
+                    
+        input:focus, textarea:focus, select:focus{
+                outline: none;
+                border-color: #8fbf9f;
+                
+
+            }
+        input:hover, textarea:hover, select:hover{
+                outline: none;
+                border-color: #8fbf9f;
+                transition: 0.15s ease, color 0.15s ease;
+        }
+
+        button{
+            padding: 0.7rem 1.2rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 0.25rem;
+            background-color: #8fbf9f;
+        }
+
+        button:hover{
+            opacity: 0.80;
+            border-color: 1rem solid;
+            color: white;
+            background-color: #527f61;
+            transition: 0.20s ease;
+        }
+
+        accent-color: #5B7D66;
+
+        /* Citation */
+        blockquote {
+            border-left: solid #8fbf9f;
+            padding-left: 15px;
+            font-size: 1.1em;
+            justify-content: center;
+        }
+}
+ 
+:root[data-theme="sombre"] {
+    --bg: #29372f;
+    --text: #dfe9e1;
+    --header-bg: #0b110d;
+    --link-bg: #2f4538;
+    --link-text: #e4efe6;
+    --link-hover-bg: #e4efe6;
+    --link-hover-text: #14221a;
+    --card-bg: #34443a;
+    --accent: #7fb391;
+    --aside-bg: #213228;
+    --aside-text: #a8d0b6;
+    --footer-bg: #0b110d;
+    --footer-text: #9fb5a6;
+
+    #contacts{
+                border-left: 5px solid #8fc7a3;
+            }
+
+        form {
+                max-width: 600px; /*largeur max*/
+                margin: 2rem auto;
+                padding-right: 5px;
+            }
+        input, textarea, select{
+                margin-bottom: 1rem;
+                border: 2px solid #8fc7a3;
+
+            }
+
+        label{
+            display: block;
+            margin-bottom: 0.4rem;
+            }
+                    
+        input:focus, textarea:focus, select:focus{
+                outline: none;
+                border-color: #7fb391;
+                
+
+            }
+
+        input:hover, textarea:hover, select:hover{
+                outline: none;
+                border-color: #7fb391;
+                transition: 0.15s ease, color 0.15s ease;
+        }
+
+        button{
+            padding: 0.7rem 1.2rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background-color: #7fb391;
+        }
+
+        button:hover{
+            opacity: 0.80;
+            border-color: 1rem solid;
+            color: white;
+            background-color: #5b7d66;
+            transition: 0.20s ease;
+        }
+
+        accent-color: #7FB391;
+}
+
+a {
+        color: #7eaa8c;
+}
+
+/* Body */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+header {
+    background-color: var(--header-bg);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.4s ease;
+}
+ 
+.header-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+ 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    flex: 1;
+}
+ 
+nav a {
+    color: var(--link-text);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--link-bg);
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+ 
+nav a:hover,
+nav a:focus-visible {
+    color: var(--link-hover-text);
+    background-color: var(--link-hover-bg);
+}
+ 
+h3 {
+    font-size: 1.1em;
+}
+
+/* Sélecteur de thème */
+
+.theme-picker {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--link-text);
+    font-size: 0.9rem;
+}
+ 
+.theme-picker select {
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--link-bg);
+    color: var(--link-text);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+ 
+/* Main */
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+ 
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+ 
+/* Carte */
+
+main > section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.4s ease;
+}
+ 
+main > section h2 {
+    margin-top: 0;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.5rem;
+}
+ 
+main > section ul {
+    padding-left: 1.2rem;
+    line-height: 1.7;
+}
+ 
+/* Un projet dans Projets */
+
+article {
+    border-left: 5px solid var(--accent);
+    padding-left: 1.5rem;
+}
+ 
+article h3 {
+    margin-top: 0;
+}
+ 
+/* Aside dans Accueil */
+
+aside {
+    color: var(--aside-text);
+    font-style: italic;
+    background-color: var(--aside-bg);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    transition: background-color 0.4s ease;
+}
+ 
+aside p {
+    margin: 0;
+}
+ 
+/* Footer */
+
+footer {
+    color: var(--footer-text);
+    background-color: var(--footer-bg);
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    header {
+        padding: 0.75rem 1rem;
+    }
+ /* Le sélecteur passe en dessous sur des écrans de moins de 700 px */
+
+    nav {
+        flex-basis: 100%;
+    }
+ 
+    .theme-picker {
+        margin: 0 auto;
+    }
+ 
+    main > section {
+        padding: 1.5rem;
+    }
+}
+
+/* Pour les personnes qui ont désactivé les animations dans leur système */
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* Permet de dérouler le texte présent dans les sous-listes */
+
+#parcours li.depliable { cursor: pointer; } /* Le curseur devient une main */
+
+#parcours .detail {
+    display: block; /* Le <span> passe sur sa propre ligne et peut avoir une hauteur */
+}
+
+#parcours li.depliable > ul,
+#parcours li.depliable > .detail {
+    max-height: 0;
+    overflow: hidden; /* Coupe tout ce qui dépasse la hauteur du texte, empêche le texte de rester visible par-dessus le reste */
+    transition: max-height 0.4s ease;
+}
+
+#parcours li.depliable.ouvert > ul,
+#parcours li.depliable.ouvert > .detail {
+    max-height: 300px;
+}
+
+/* Permet d'animer le CV et décaler le texte */
+
+#parcours article > ul > li {
+    transition: transform 0.25s ease;
+}
+
+#parcours article > ul > li:hover {
+    transform: translateX(12px);
+}
+
+#parcours li.depliable.ouvert > .detail {
+    max-height: 3em;
+}
